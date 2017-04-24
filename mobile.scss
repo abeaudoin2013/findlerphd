@@ -1,0 +1,13 @@
+@media screen and (max-width: 825px) {
+	#home {
+		#home-circle-container {
+			#home-circle {
+				width: 100%;
+				padding-top: 100%;
+				animation: rollInMobile .75s ease forwards;
+		    -webkit-animation: rollInMobile .75s ease forwards;
+		    -moz-animation: rollInMobile .75s ease forwards;
+			}
+		}
+	}	
+}
