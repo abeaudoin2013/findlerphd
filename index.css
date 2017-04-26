@@ -418,17 +418,6 @@ body {
 @media screen and (max-width: 750px) {
   #navigation-overlay-container {
     width: 250px; } }
-.slide-in-overlay {
-  animation: slideNavIn .25s ease forwards;
-  -webkit-animation: slideNavIn .25s ease forwards;
-  -moz-animation: slideNavIn .25s ease forwards; }
-
-.slide-out-overlay {
-  right: 0 !important;
-  animation: slideNavOut .25s ease forwards;
-  -webkit-animation: slideNavOut .25s ease forwards;
-  -moz-animation: slideNavOut .25s ease forwards; }
-
 #home .home-text-container {
   color: #484848;
   position: relative;
@@ -519,7 +508,7 @@ body {
       display: none;
       margin: 10px 0 0 0;
       font-size: 1.3em;
-      max-height: 550px;
+      max-height: 60vh;
       overflow: scroll; }
       #services .service-icons-container .service-icon-container .service-icon-details .service-icon-details-sub-title {
         font-size: 1.5em;
@@ -531,7 +520,7 @@ body {
     #services .service-icons-container .service-icon-container .service-details-display-inline {
       display: table-cell;
       text-align: left;
-      padding: 0 5%;
+      padding: 0 50px;
       position: relative;
       vertical-align: top; }
     #services .service-icons-container .service-icon-container .service-icon-title-hide {
@@ -540,9 +529,8 @@ body {
       -moz-animation: goOpac .3s ease forwards; }
   #services .service-icons-container .block {
     display: table;
-    animation: maxShrinkage .5s  ease forwards;
-    -webkit-animation: maxShrinkage .5s  ease forwards;
-    -moz-animation: maxShrinkage .5s  ease forwards; }
+    width: 100%;
+    margin: 25px 10%; }
     #services .service-icons-container .block .service-icon {
       margin: 0; }
     #services .service-icons-container .block .forensics-clicked {

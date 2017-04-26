@@ -53,7 +53,8 @@ $(document).ready(function () {
 				$(self).addClass("service-icon-border");
 
 				// hide all of the icons
-				$(".service-icon").addClass("service-icon-hide");
+					$(".service-icon").addClass("service-icon-hide");
+
 
 				// add these edge cases
 				$(self).closest(".icon-row").find("#therapy-image").addClass("therapy-shrinkage");
@@ -62,7 +63,6 @@ $(document).ready(function () {
 			  $(self).closest(".icon-row").find("#second-black").css({"margin": "0 0"});
 			  $(self).closest(".icon-row").find("#forensics").addClass("forensics-clicked");
 			  $(self).closest(".icon-row").find("#tiny-a").hide();
-
 
 			  // if the animation is not complete, hide the title
 				if (!animationComplete) {
@@ -81,11 +81,13 @@ $(document).ready(function () {
 				       	       .removeClass("service-icon-details-show")
 				       	       .hide();
 				       	 $(div).find(".service-icon")
-				       	 			 .removeClass("service-icon-display-inline service-icon-border")
+				       	 			 .removeClass(" service-icon-border")
+				       	 			 .addClass("service-icon-display-inline");
 				       });
+				// if (!animationComplete) {
+					$(self).addClass("service-icon-display-inline");
+				// }
 
-				$(self).addClass("service-icon-display-inline");
-				
 				// makes block elements slide in
 				$(".service-icons-container").addClass("service-icons-container-toggled");
 
@@ -159,8 +161,7 @@ $(document).ready(function () {
 					$("#navigation").removeClass("navigation-untoggled")
 					                .addClass("navigation-toggled");
 
-					$("#navigation-overlay-container").removeClass("slide-out-overlay")
-					                                  .addClass("slide-in-overlay");
+					$("#navigation-overlay-container").animate({right: "0px"}, 250);
 					self.navClicked = true;
 
 				} else {
@@ -168,8 +169,7 @@ $(document).ready(function () {
 					$("#navigation").removeClass("navigation-toggled")
 					                .addClass("navigation-untoggled");
 
-					$("#navigation-overlay-container").removeClass("slide-in-overlay")
-					                                  .addClass("slide-out-overlay");
+					$("#navigation-overlay-container").animate({right: "-400px"}, 250);
 					self.navClicked = false;
 
 				}
@@ -186,7 +186,7 @@ $(document).ready(function () {
 
 			$(".nav-item").unbind("click").bind("click", function () {
 				var id = $(this).attr("id");
-				var $sec = $("section[name='" + id + "'").offset().top;
+				var $sec = $("section[name='" + id + "']").offset().top;
 				$('html, body').animate({
 		      scrollTop: $sec
 		    }, 250);
