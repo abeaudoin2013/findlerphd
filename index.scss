@@ -234,14 +234,17 @@ body {
 
     .faq {
       .faq-question {
-        margin: 0 0 25px 0;
+        margin: 0 0 15px 0;
         font-size: 1.5em;
         cursor: pointer;
       }
       .faq-answer {
-        margin: 15px 0;
+        margin: 0;
         display: none;
         font-size: 1.3em;
+        p {
+          margin: 10px 0;
+        }
       }
     }
   }

@@ -457,13 +457,15 @@ body {
   #faqs #faq-title {
     padding: 20px 0; } }
 #faqs .faq-container .faq .faq-question {
-  margin: 0 0 25px 0;
+  margin: 0 0 15px 0;
   font-size: 1.5em;
   cursor: pointer; }
 #faqs .faq-container .faq .faq-answer {
-  margin: 15px 0;
+  margin: 0;
   display: none;
   font-size: 1.3em; }
+  #faqs .faq-container .faq .faq-answer p {
+    margin: 10px 0; }
 
 #services .services-mobile {
   display: none; }
