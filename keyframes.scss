@@ -298,6 +298,26 @@
 }
 
 
+@keyframes shrinkageIcon {
+	100% {
+		font-size: 4em;
+		padding: 20px 0 0 12px;
+	}
+}
+@-webkit-keyframes shrinkageIcon {
+	100% {
+		font-size: 4em;
+		padding: 20px 0 0 12px;
+	}
+}
+@-moz-keyframes shrinkageIcon {
+	100% {
+		font-size: 4em;
+		padding: 20px 0 0 12px;
+	}
+}
+
+
 @keyframes therapyShrinkage {
 	100% {
 		width: 60px;

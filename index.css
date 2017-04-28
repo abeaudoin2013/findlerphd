@@ -184,6 +184,18 @@
   100% {
     width: 45px;
     padding: 97% 0 0 0; } }
+@keyframes shrinkageIcon {
+  100% {
+    font-size: 4em;
+    padding: 20px 0 0 12px; } }
+@-webkit-keyframes shrinkageIcon {
+  100% {
+    font-size: 4em;
+    padding: 20px 0 0 12px; } }
+@-moz-keyframes shrinkageIcon {
+  100% {
+    font-size: 4em;
+    padding: 20px 0 0 12px; } }
 @keyframes therapyShrinkage {
   100% {
     width: 60px;
@@ -503,18 +515,23 @@ body {
         animation: shrinkageI .5s  ease forwards;
         -webkit-animation: shrinkageI .5s  ease forwards;
         -moz-animation: shrinkageI .5s  ease forwards; }
+    #services .service-icons-container .service-icon-container .service-icon-hide-special {
+      animation: shrinkage .5s  ease forwards;
+      -webkit-animation: shrinkage .5s  ease forwards;
+      -moz-animation: shrinkage .5s  ease forwards; }
+      #services .service-icons-container .service-icon-container .service-icon-hide-special .service-icon-image {
+        animation: shrinkageIcon .5s  ease forwards;
+        -webkit-animation: shrinkageIcon .5s  ease forwards;
+        -moz-animation: shrinkageIcon .5s  ease forwards; }
     #services .service-icons-container .service-icon-container .service-icon-title {
       font-size: 32px;
       margin-bottom: 0px; }
     #services .service-icons-container .service-icon-container .service-icon-details {
       display: none;
       margin: 10px 0 0 0;
-      font-size: 1.3em;
-      max-height: 60vh;
-      overflow: scroll; }
+      font-size: 1.3em; }
       #services .service-icons-container .service-icon-container .service-icon-details .service-icon-details-sub-title {
-        font-size: 1.5em;
-        font-style: italic; }
+        font-size: 1em; }
     #services .service-icons-container .service-icon-container .service-icon-details-show {
       position: absolute;
       width: 80%;
@@ -627,17 +644,13 @@ body {
     -webkit-transition: all .45s;
     -moz-transition: all .45s; }
     #services .service-icons-container #neuro #neuro-image {
-      background: url(img/neuro.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      width: 70px;
-      margin: 0 auto;
-      padding: 240px 0 0 0;
-      transition: all 2.5s;
-      -webkit-transition: all 2.5s; }
+      font-size: 6.5em;
+      color: #000;
+      padding: 75px 0 0 25px;
+      transition: all 1s;
+      -webkit-transition: all 1s; }
   #services .service-icons-container #neuro:hover #neuro-image {
-    transform: rotate(360deg); }
+    color: #06e144; }
   #services .service-icons-container #neuro-title {
     color: #484848; }
   #services .service-icons-container #forensics {

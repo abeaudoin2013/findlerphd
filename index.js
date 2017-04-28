@@ -53,8 +53,15 @@ $(document).ready(function () {
 				$(self).addClass("service-icon-border");
 
 				// hide all of the icons
-					$(".service-icon").addClass("service-icon-hide");
+				$(".service-icon").each(function (i, div) {
+					
+					if ($(div).attr("id") === "neuro") {
+						$(div).addClass("service-icon-hide-special");
+					} else {
+						$(div).addClass("service-icon-hide");
+					}
 
+				});
 
 				// add these edge cases
 				$(self).closest(".icon-row").find("#therapy-image").addClass("therapy-shrinkage");
@@ -91,6 +98,15 @@ $(document).ready(function () {
 				// makes block elements slide in
 				$(".service-icons-container").addClass("service-icons-container-toggled");
 
+				var resize = function (go, obj) {
+					if (go) {
+						$(window).on("resize", function () {
+							console.log("hey");
+							var newHeight = $(obj).siblings(".service-details").find(".service-icon-details").height();
+	          	$("#services").css({"min-height": (newHeight + 500).toString() +"px"});
+						});
+					}
+				}
 				var showTitle = function (first) {
 					
 
@@ -112,6 +128,9 @@ $(document).ready(function () {
 						         .find(".service-icon-details")
 						         .addClass("service-icon-details-show")
 						         .fadeIn(300);
+						  var newHeight = $(self).siblings(".service-details").find(".service-icon-details").height();
+	          	$("#services").css({"min-height": (newHeight + 500).toString() +"px"});
+	          	resize(true, self);
 		        }, 450);
 	        } else {
 	        	var top = $(self).closest(".service-icon-container").offset().top;
@@ -126,6 +145,9 @@ $(document).ready(function () {
 					         .find(".service-icon-details")
 					         .addClass("service-icon-details-show")
 					         .fadeIn(300);
+				    var newHeight = $(self).siblings(".service-details").find(".service-icon-details").height();
+          	$("#services").css({"min-height": (newHeight + 500).toString() +"px"});
+          	resize(true, self);
 	        }
 	        
 				}
