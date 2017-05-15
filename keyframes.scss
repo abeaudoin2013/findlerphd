@@ -300,19 +300,22 @@
 
 @keyframes shrinkageIcon {
 	100% {
-		font-size: 4em;
+		// font-size: 4em;
+		-webkit-text-size-adjust: none;
 		padding: 20px 0 0 12px;
 	}
 }
 @-webkit-keyframes shrinkageIcon {
 	100% {
-		font-size: 4em;
+		// font-size: 4em;
+		-webkit-text-size-adjust: none;
 		padding: 20px 0 0 12px;
 	}
 }
 @-moz-keyframes shrinkageIcon {
 	100% {
-		font-size: 4em;
+		// font-size: 4em;
+		-webkit-text-size-adjust: none;
 		padding: 20px 0 0 12px;
 	}
 }

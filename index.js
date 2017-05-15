@@ -57,6 +57,7 @@ $(document).ready(function () {
 					
 					if ($(div).attr("id") === "neuro") {
 						$(div).addClass("service-icon-hide-special");
+						$("#neuro-image").animate({fontSize: "65px"});
 					} else {
 						$(div).addClass("service-icon-hide");
 					}

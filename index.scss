@@ -1,6 +1,9 @@
 @import 'vars.scss';
 @import 'keyframes.scss';
 
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
 body, h1, h2, h3, h4, h5, p, span, input, label, div {
   font-family: $font;
   color: $charcoal;
@@ -305,9 +308,19 @@ body {
         -webkit-animation: shrinkage .5s  ease forwards;
         -moz-animation: shrinkage .5s  ease forwards;
         .service-icon-image {
-          animation: shrinkageIcon .5s  ease forwards;
-          -webkit-animation: shrinkageIcon .5s  ease forwards;
-          -moz-animation: shrinkageIcon .5s  ease forwards;
+          vertical-align: middle;
+          animation-name: shrinkageIcon;
+          animation-duration: .5s;
+          animation-timing-function: ease;
+          animation-fill-mode: forwards;
+          -webkit-animation-name: shrinkageIcon;
+          -webkit-animation-duration: .5s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-fill-mode: forwards;
+          -moz-animation-name: shrinkageIcon;
+          -moz-animation-duration: .5s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-fill-mode: forwards;
         }
       }
       .service-icon-title {
