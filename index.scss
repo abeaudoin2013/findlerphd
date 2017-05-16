@@ -12,6 +12,16 @@ body {
   margin: 0;
 }
 
+#tree-background {
+    background: url(img/tree.png) no-repeat;
+    position: absolute;
+    background-size: 28%;
+    z-index: -1000;
+    width: 100%;
+    height: 100vh;
+    background-position: 0% 100%;
+}
+
 // standard classes
 .full {
   width: 100%;
@@ -185,7 +195,7 @@ body {
   .home-text-container {
     color: $charcoal;
     position: relative;
-    width: 60%;
+    width: 50%;
     min-width: 300px;
     margin: 0 auto;
     padding: 20% 0 0 0;
@@ -638,7 +648,7 @@ body {
     #map {
       width: 100%;
       margin: 0 auto;
-      height: 300px;
+      height: 510px;
     }
   }
 }
