@@ -133,6 +133,21 @@
     padding: 0 0 0 0; }
   100% {
     padding: 20% 0 0 0; } }
+@keyframes spinCog {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@-webkit-keyframes spinCog {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@-moz-keyframes spinCog {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 @keyframes opac {
   0% {
     opacity: 0; }
@@ -309,7 +324,7 @@ body {
 #tree-background {
   background: url(img/tree.png) no-repeat;
   position: absolute;
-  background-size: 28%;
+  background-size: 23%;
   z-index: -1000;
   width: 100%;
   height: 100vh;
@@ -471,7 +486,38 @@ body {
 @media screen and (max-width: 400px) {
   #home .home-text-container {
     padding: 35% 0 0 0; } }
+@media screen and (max-height: 515px) {
+  #home .home-text-container {
+    padding: 23% 0 0 0; } }
 
+#faqs #cog-background {
+  background: url(img/cog.png) no-repeat;
+  position: absolute;
+  background-size: 100%;
+  z-index: -1100;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  margin: 39% 0 0 80%;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  animation: spinCog 10s linear infinite;
+  -webkit-animation: spinCog 10s linear infinite;
+  -moz-animation: spinCog 10s linear infinite; }
+#faqs #cog-background-2 {
+  background: url(img/cog.png) no-repeat;
+  position: absolute;
+  background-size: 100%;
+  z-index: -1200;
+  width: 250px;
+  height: 250px;
+  background-position: center;
+  margin: 10% 0 0 30%;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  animation: spinCog 60s linear infinite;
+  -webkit-animation: spinCog 60s linear infinite;
+  -moz-animation: spinCog 60s linear infinite; }
 #faqs #faq-title {
   text-transform: uppercase;
   margin: 0 auto;
@@ -735,6 +781,20 @@ body {
         font-size: 1.3em;
         font-style: italic; } }
 
+#contact #cog-background-3 {
+  background: url(img/cog.png) no-repeat;
+  position: absolute;
+  background-size: 100%;
+  z-index: -1200;
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  margin: 5% 0 0 35%;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  animation: spinCog 45s linear infinite;
+  -webkit-animation: spinCog 45s linear infinite;
+  -moz-animation: spinCog 45s linear infinite; }
 #contact #contact-circle-container {
   width: 100%;
   height: 100vh;
