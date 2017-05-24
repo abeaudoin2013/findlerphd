@@ -1,6 +1,9 @@
 @import 'vars.scss';
 @import 'keyframes.scss';
 
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
 body, h1, h2, h3, h4, h5, p, span, input, label, div {
   font-family: $font;
   color: $charcoal;
@@ -8,6 +11,17 @@ body, h1, h2, h3, h4, h5, p, span, input, label, div {
 body {
   margin: 0;
 }
+
+#tree-background {
+    background: url(img/tree.png) no-repeat;
+    position: absolute;
+    background-size: 23%;
+    z-index: -1000;
+    width: 100%;
+    height: 100vh;
+    background-position: 0% 100%;
+}
+
 
 // standard classes
 .full {
@@ -164,17 +178,17 @@ body {
     width: 250px;
   }
 }
-.slide-in-overlay {
-  animation: slideNavIn .25s ease forwards;
-  -webkit-animation: slideNavIn .25s ease forwards;
-  -moz-animation: slideNavIn .25s ease forwards;
-}
-.slide-out-overlay {
-  right: 0 !important;
-  animation: slideNavOut .25s ease forwards;
-  -webkit-animation: slideNavOut .25s ease forwards;
-  -moz-animation: slideNavOut .25s ease forwards;
-}
+// .slide-in-overlay {
+//   animation: slideNavIn .25s ease forwards;
+//   -webkit-animation: slideNavIn .25s ease forwards;
+//   -moz-animation: slideNavIn .25s ease forwards;
+// }
+// .slide-out-overlay {
+//   right: 0;
+//   animation: slideNavOut .25s ease forwards;
+//   -webkit-animation: slideNavOut .25s ease forwards;
+//   -moz-animation: slideNavOut .25s ease forwards;
+// }
 // ./nav
 
 // home
@@ -182,7 +196,7 @@ body {
   .home-text-container {
     color: $charcoal;
     position: relative;
-    width: 60%;
+    width: 50%;
     min-width: 300px;
     margin: 0 auto;
     padding: 20% 0 0 0;
@@ -213,11 +227,46 @@ body {
     .home-text-container {
       padding: 35% 0 0 0;
     }
+  } 
+  @media screen and (max-height: 515px) {
+    .home-text-container {
+      padding: 23% 0 0 0;
+    }
   }
 }
 
 #faqs {
-  #faq-title {
+  #cog-background {
+    background: url(img/cog.png) no-repeat;
+    position: absolute;
+    background-size: 100%;
+    z-index: -1100;
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    margin: 39% 0 0 80%;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    animation: spinCog 10s linear infinite;
+    -webkit-animation: spinCog 10s linear infinite;
+    -moz-animation: spinCog 10s linear infinite;
+  }
+  #cog-background-2 {
+    background: url(img/cog.png) no-repeat;
+    position: absolute;
+    background-size: 100%;
+    z-index: -1200;
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    margin: 10% 0 0 30%;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    animation: spinCog 60s linear infinite;
+    -webkit-animation: spinCog 60s linear infinite;
+    -moz-animation: spinCog 60s linear infinite;
+  }
+ #faq-title {
     text-transform: uppercase;
     // width: 80%;
     margin: 0 auto;
@@ -234,14 +283,17 @@ body {
 
     .faq {
       .faq-question {
-        margin: 0 0 25px 0;
+        margin: 0 0 15px 0;
         font-size: 1.5em;
         cursor: pointer;
       }
       .faq-answer {
-        margin: 15px 0;
+        margin: 0;
         display: none;
         font-size: 1.3em;
+        p {
+          margin: 10px 0;
+        }
       }
     }
   }
@@ -297,6 +349,26 @@ body {
           -moz-animation: shrinkageI .5s  ease forwards;
         }
       }
+      .service-icon-hide-special {
+        animation: shrinkage .5s  ease forwards;
+        -webkit-animation: shrinkage .5s  ease forwards;
+        -moz-animation: shrinkage .5s  ease forwards;
+        .service-icon-image {
+          vertical-align: middle;
+          animation-name: shrinkageIcon;
+          animation-duration: .5s;
+          animation-timing-function: ease;
+          animation-fill-mode: forwards;
+          -webkit-animation-name: shrinkageIcon;
+          -webkit-animation-duration: .5s;
+          -webkit-animation-timing-function: ease;
+          -webkit-animation-fill-mode: forwards;
+          -moz-animation-name: shrinkageIcon;
+          -moz-animation-duration: .5s;
+          -moz-animation-timing-function: ease;
+          -moz-animation-fill-mode: forwards;
+        }
+      }
       .service-icon-title {
         font-size: 32px;
         margin-bottom: 0px;
@@ -305,11 +377,8 @@ body {
         display: none;
         margin: 10px 0 0 0;
         font-size: 1.3em;
-        max-height: 550px;
-        overflow: scroll;
         .service-icon-details-sub-title {
-          font-size: 1.5em;
-          font-style: italic;
+          font-size: 1em;
         }
       }
       .service-icon-details-show {
@@ -320,9 +389,8 @@ body {
       .service-details-display-inline {
         display: table-cell;
         text-align: left;
-        padding: 0 5%;
+        padding: 0 50px;
         position: relative;
-        // top: -235px;
         vertical-align: top;
 
       }
@@ -334,9 +402,11 @@ body {
     }
     .block {
       display: table;
-      animation: maxShrinkage .5s  ease forwards;
-      -webkit-animation: maxShrinkage .5s  ease forwards;
-      -moz-animation: maxShrinkage .5s  ease forwards;
+      width: 100%;
+    margin: 25px 10%;
+      // animation: maxShrinkage .5s  ease forwards;
+      // -webkit-animation: maxShrinkage .5s  ease forwards;
+      // -moz-animation: maxShrinkage .5s  ease forwards;
       .service-icon {
         margin: 0;
       }
@@ -470,20 +540,17 @@ body {
       -webkit-transition: all .45s;
       -moz-transition: all .45s;
       #neuro-image {
-        background: url(img/neuro.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 70px;
-        margin: 0 auto;
-        padding: 240px 0 0 0;
-        transition: all 2.5s;
-        -webkit-transition: all 2.5s;
+        font-size: 6.45em;
+        color: #000;
+        padding: 77px 0 0 24px;
+        transition: all 1s;
+        -webkit-transition: all 1s;
       }
     }
     #neuro:hover {
       #neuro-image {
-        transform: rotate(360deg);
+        color: $green;
+        // transform: rotate(360deg);
       }
     }
     #neuro-title {
@@ -576,6 +643,21 @@ body {
 
 
 #contact {
+  #cog-background-3 {
+    background: url(img/cog.png) no-repeat;
+    position: absolute;
+    background-size: 100%;
+    z-index: -1200;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    margin: 5% 0 0 35%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    animation: spinCog 45s linear infinite;
+    -webkit-animation: spinCog 45s linear infinite;
+    -moz-animation: spinCog 45s linear infinite;
+  }
   #contact-circle-container {
     width: 100%;
     height: 100vh;
@@ -617,7 +699,7 @@ body {
     #map {
       width: 100%;
       margin: 0 auto;
-      height: 300px;
+      height: 510px;
     }
   }
 }

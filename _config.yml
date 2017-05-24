@@ -1,0 +1,7 @@
+url: https://drmariannenfindler.com   # with the https protocol
+enforce_ssl: drmariannenfindler.com   # without any protocol
+gems:
+  - jekyll-seo-tag
+title: Dr. Marianne N Findler | Therapist
+description: Dr. Marianne N Findler is a therapist who holds her practice on the Upper West Side of Manhattan.
+url: https://drmariannenfindler.com
